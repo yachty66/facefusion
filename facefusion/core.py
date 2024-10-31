@@ -302,8 +302,8 @@ def process_headless(args : Args) -> ErrorCode:
 
 
 def process_image(start_time : float) -> ErrorCode:
-	if analyse_image(state_manager.get_item('target_path')):
-		return 3
+	# if analyse_image(state_manager.get_item('target_path')):
+	# 	return 3
 	# clear temp
 	logger.debug(wording.get('clearing_temp'), __name__)
 	clear_temp_directory(state_manager.get_item('target_path'))
@@ -352,8 +352,8 @@ def process_image(start_time : float) -> ErrorCode:
 
 
 def process_video(start_time : float) -> ErrorCode:
-	if analyse_video(state_manager.get_item('target_path'), state_manager.get_item('trim_frame_start'), state_manager.get_item('trim_frame_end')):
-		return 3
+	# if analyse_video(state_manager.get_item('target_path'), state_manager.get_item('trim_frame_start'), state_manager.get_item('trim_frame_end')):
+	# 	return 3
 	# clear temp
 	logger.debug(wording.get('clearing_temp'), __name__)
 	clear_temp_directory(state_manager.get_item('target_path'))
